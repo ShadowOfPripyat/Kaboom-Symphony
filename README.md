@@ -1,5 +1,15 @@
 # Kaboom-Symphony
 Kaboom Symphony is how i named my Python MIDI Player. It is designed to be fast, accessible, reliable and even funny. 
+##### Libraries used:
+It uses Qt6 (PySide6) for the user interface, sys, and PyGame for the midi.                                                                     
+                                           
+█████████████               
+█  ███ ███  █               
+█  ███ ███  █               
+█  ███ ███  █               
+█   █   █   █               
+█   █   █   █               
+█████████████ 
 
 ## Features
 
@@ -7,8 +17,6 @@ Kaboom Symphony is how i named my Python MIDI Player. It is designed to be fast,
 - Fast file Loading
 - Accessible interface (No small buttons)
 - Built-in soundfont
-
-
 
 ## To Do (Roadmap)
 
@@ -46,4 +54,8 @@ Kaboom Symphony is how i named my Python MIDI Player. It is designed to be fast,
 ## Contributing
 
 Choose an issue you want to work on, and if its not created, you can make a new!
+
+
+
+Although, do not try any dirty game in this repo...
 
