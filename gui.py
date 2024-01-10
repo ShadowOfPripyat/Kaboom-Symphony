@@ -1,11 +1,8 @@
-import sys                                                          
-import pygame                                                       
-import pygame.midi                                                  
 from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QFileDialog, QVBoxLayout, QWidget, QSlider, QLabel
 from PySide6.QtGui import QIcon, QPixmap                       
-from PySide6.QtCore import Qt, QFile, QTextStream                              
-                                                                    
-                                                                    
+from PySide6.QtCore import Qt
+import sys
+
 class MidiPlayer(QMainWindow):                                      
     def __init__(self):                                             
         super().__init__()                                          
@@ -53,55 +50,15 @@ class MidiPlayer(QMainWindow):
         self.slider_pitch_bend.setMaximum(8191)                     
         self.slider_pitch_bend.setValue(0)                          
         self.layout.addWidget(QLabel("Pitch"))                      
-        self.layout.addWidget(self.slider_pitch_bend)               
+        self.layout.addWidget(self.slider_pitch_bend)
+        
+        # Theme                 
+        DefaultDarkTheme = (".\DarkTheme.css")                                  
+        self.setStyleSheet(DefaultDarkTheme)
+        
+        
 
-        # Load theme from External css                                                 
-        theme_file = QFile("DarkTheme.css")
-        theme_file.open(QFile.ReadOnly | QFile.Text)
-        stream = QTextStream(theme_file)
-        self.setStyleSheet(stream.readAll())                                                          
-                                                                    
-        self.file_path = ""                                         
-                                                                    
-        pygame.init()                                               
-        pygame.mixer.init()                                         
-
-    def open_file(self):                                            
-        options = QFileDialog.Options()                             
-        file_name, _ = QFileDialog.getOpenFileName(                 
-            self, "Open MIDI File", "",                             
-            "MIDI Files (*.mid);;All Files (*)", options=options    
-        )                                                           
-                                                                    
-        if file_name:                                               
-            self.file_path = file_name                              
-            pygame.mixer.music.load(self.file_path)                 
-            pygame.mixer.music.play()                               
-            self.set_pitch_bend()                                   
-                                                                    
-    def play_midi(self):                                            
-        if self.file_path:                                          
-            pygame.mixer.music.load(self.file_path)                 
-            pygame.mixer.music.play()                               
-
-    def stop_midi(self):                                            
-        pygame.mixer.music.stop()                                   
-                                                                    
-    def change_volume(self):                                        
-        volume = self.volume_slider.value()                         
-        pygame.mixer.music.set_volume(volume / 100.0)               
-        self.volume_label.setText(f"Volume: {volume}%")             
-                                                                    
-    def set_pitch_bend(self):                                       
-        pitch_value = self.slider_pitch_bend.value()                
-        pygame.midi.init()                                          
-        output = pygame.midi.Output(0)                              
-        output.set_instrument(0)                                    
-        output.pitch_bend(pitch_value)                              
-        output.close()                                              
-
-
-
+        
 def main():                                                         
     app = QApplication(sys.argv)                                    
     player = MidiPlayer()                                           
@@ -110,4 +67,4 @@ def main():
 
 
 if __name__ == "__main__":                                          
-    main()                                                           
+    main()

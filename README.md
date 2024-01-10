@@ -58,4 +58,3 @@ Choose an issue you want to work on, and if its not created, you can make a new!
 
 
 Although, do not try any dirty game in this repo...
-
