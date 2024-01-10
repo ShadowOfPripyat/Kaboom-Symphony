@@ -1,9 +1,8 @@
 import sys                                                          
 import pygame                                                       
 import pygame.midi                                                  
-from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton
-from PySide6.QtWidgets import QFileDialog, QVBoxLayout, QWidget     
-from PySide6.QtWidgets import QSlider, QLabel                       
+from PySide6.QtWidgets import QApplication, QMainWindow, QPushButton, QFileDialog, QVBoxLayout, QWidget, QSlider, QLabel
+from PySide6.QtGui import QIcon, QPixmap                       
 from PySide6.QtCore import Qt                                       
                                                                     
                                                                     
@@ -11,8 +10,13 @@ class MidiPlayer(QMainWindow):
     def __init__(self):                                             
         super().__init__()                                          
                                                                     
-        self.setWindowTitle("MIDI Player")                          
+        self.setWindowTitle("Kaboom Symphony (v0.0.1) Alpha")                          
         self.setGeometry(100, 100, 400, 250)                        
+                   
+        # Set window icon
+        my_pixmap = QPixmap(".\icon.png")
+        my_icon = QIcon(my_pixmap)
+        self.setWindowIcon(my_icon)           
                                                                     
         self.central_widget = QWidget(self)                         
         self.setCentralWidget(self.central_widget)                  
