@@ -1,15 +1,11 @@
 # Kaboom Symphony 🎺💥
 Kaboom Symphony is how i named my Python MIDI Player. It is designed to be fast, accessible, reliable and even funny. 
 ##### Libraries used:
-It uses Qt6 (PySide6) for the user interface, sys, and PyGame for the midi.                                                                     
+It uses Qt6 (PySide6) for the user interface, sys, and PyGame for the midi.
+
+<img width="315" alt="image (4)" src="https://github.com/ShadowOfPripyat/Kaboom-Symphony/assets/73404930/a25e7995-4edc-4b3c-92ca-37b7825a5419">
+
                                            
-█████████████              
-█⠀⠀███ ███ ⠀⠀█               
-█⠀⠀███ ███⠀ ⠀█               
-█⠀⠀███ ███ ⠀⠀█              
-█⠀⠀⠀█⠀⠀⠀█⠀⠀⠀█          
-█⠀⠀⠀█⠀⠀⠀█⠀⠀⠀█              
-█████████████
 
 ## Features
 
@@ -21,23 +17,27 @@ It uses Qt6 (PySide6) for the user interface, sys, and PyGame for the midi.
 ## To Do (Roadmap)
 
 #### *Possible to do:*
-- Master **Pitch** Slider
 
 - **Pause/Resume** buttons
 
 - Low Frequency Oscilators (LFO) to randomnize pitch of different instruments
 
-- Time Slider (To control in what point we want to listen)
+- Time Slider (To control at what point we want to listen)
 
 - A *toggle* button to make the window stay always on top
 
-- Settings menu button (compact icon on bottom right)
+- Settings menu button (compact icon on the bottom right)
 
 - File Asociattion (*.mid, .midi, .kar) 
 
-- Program Mascot and Dancer inspired in Fl Studio's FL Dance (To the tempo of midi File)
+- Program Mascot and Dancer inspired in Fl Studio's Fruity Dance (To the tempo of midi File)
 
-#### *Not Known to be Possible:*
+- Qt window effects
+
+#### *Not Known to be Possible yet:*
+- Tempo Slider
+
+- Master **Pitch** Slider
 
 - Reverb effects
 
