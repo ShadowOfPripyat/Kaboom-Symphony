@@ -10,7 +10,7 @@ class MidiPlayer(QMainWindow):
     def __init__(self):                                             
         super().__init__()                                          
                                                                     
-        self.setWindowTitle("Kaboom Symphony (v0.0.1) Alpha")                          
+        self.setWindowTitle(" Kaboom Symphony (v0.0.1) Alpha")                          
         self.setGeometry(100, 100, 400, 250)                        
                    
         # Set window icon
