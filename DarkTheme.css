@@ -40,16 +40,18 @@ QSlider {
 QSlider::groove {                                       
     border: 1px solid #555;                              
     background-color: #777;                             
-    border-radius: 5px;                                 
+    border-radius: 1px;                                 
     height: 10px;                                       
-    margin: -10px;                                      
+    margin: -10px;
+    padding-left: 10%;
+    padding-right: 10%;                                      
 }                                                        
 QSlider::handle {                                       
     background-color: #3e99fa;                          
     border: 1px solid #555;                             
-    border-radius: 15px;                                
+    border-radius: 5px;                                
     height: 1px;                                        
     width: 20px;                                        
     border-radius: 3px;                                 
-    margin: -15px -15px;                                
+    margin: -15px 10px;                                
 }

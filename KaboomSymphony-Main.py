@@ -11,7 +11,7 @@ class MidiPlayer(QMainWindow):
         super().__init__()                                          
                                                                     
         self.setWindowTitle(" Kaboom Symphony (v0.0.1) Alpha")                          
-        self.setGeometry(700, 300, 400, 250)                        
+        self.setGeometry(700, 300, 400, 250) # Set Window Position and Size (Px,Py, Sx,Sy)                       
                    
         # Set window icon
         my_pixmap = QPixmap(".\icon.png")
@@ -30,7 +30,8 @@ class MidiPlayer(QMainWindow):
         self.btn_play = QPushButton("Play", self)                   
         self.btn_play.clicked.connect(self.play_midi)               
         self.layout.addWidget(self.btn_play)                        
-
+        
+        
         self.btn_stop = QPushButton("Stop", self)                   
         self.btn_stop.clicked.connect(self.stop_midi)               
         self.layout.addWidget(self.btn_stop)                        
@@ -90,15 +91,9 @@ class MidiPlayer(QMainWindow):
     def change_volume(self):                                        
         volume = self.volume_slider.value()                         
         pygame.mixer.music.set_volume(volume / 100.0)               
-        self.volume_label.setText(f"Volume: {volume}%")             
+        self.volume_label.setText(f"Volume: {volume}%")
+                    
                                                                     
-    def set_pitch_bend(self):                                       
-        pitch_value = self.slider_pitch_bend.value()                
-        pygame.midi.init()                                          
-        output = pygame.midi.Output(0)                              
-        output.set_instrument(0)                                    
-        output.pitch_bend(pitch_value)                              
-        output.close()                                              
 
 
 
